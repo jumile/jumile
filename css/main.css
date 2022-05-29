@@ -1,0 +1,347 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* 	background-image: url(../images/background_body.jpg); */
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    font-family: Inter, "Arial Narrow", Arial, sans-serif;
+}
+
+header {
+    background: #fff;
+    padding: 50px 0;
+    z-index: 300;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    position: relative;
+    z-index: 300;
+}
+nav a {
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: #000;
+    border-bottom: 1px #036 solid;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+#main a[href*="index.html"],
+#breeds a[href*="breeds.html"] {
+    color: #036;
+    border-bottom: 1px #036 solid;
+}
+
+.submenu {
+    display: block;
+    max-width: 150px;
+    position: absolute;
+    background: #fff;
+    z-index: 600;
+    padding: 0;
+    margin-left: -10px;
+    margin-top: -2px;
+    opacity: 0;
+    transition: opacity .5s;
+}
+.submenu li {
+    border-bottom: 1px solid #036;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.submenu li:hover {
+    background: rgba(181, 217, 248, 0.331);
+}
+.submenuLink {
+    background: url(../images/arrow.svg) no-repeat center right;
+    padding-right: 13px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.submenu a {
+    display: block;
+    padding: 7px 0px;
+}
+.submenu a:hover {
+    border: none;
+    color: #036;
+
+}
+
+.bannerWrapper {
+    background-image: url(../images/background_body.jpg);
+}
+.banner {
+    height: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+
+}
+.banner img {
+    /* max-height: 100%; */
+    width: 100%;
+}
+.banner .cycle-pager {
+    text-align: right;
+    width: 100%;
+    position: absolute;
+    right: 1%;
+    bottom: 3%;
+    overflow: hidden;
+    z-index: 500;
+    color: #036;
+    font-size: 50px;
+    cursor: pointer;
+}
+.banner .cycle-pager-active {
+    text-align: right;
+    overflow: hidden;
+    z-index: 500;
+    color: #009;
+}
+
+
+main {    
+    padding: 0px 50px 20px;
+}
+.shepherd {
+    background: url(../images/shepherd_bag.png) no-repeat right -35px bottom #fff;
+}
+.content {
+    display: flex;
+    gap: 30px;
+}
+.photo {
+    /* flex-basis: 250px; */
+}
+.about {
+    
+}
+
+h1 {
+    font-family: 'Comfortaa', cursive;
+    color: #c00;
+    font-weight: 400;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    padding-top: 50px;
+}
+h2 {
+    color: #036;
+    font-weight: 400;
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+p {
+    font-size: .8rem;
+    margin: 0 0 5px;
+    padding: 0;
+    line-height: 1.6;
+}
+a {
+    color: #c00;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+    font-weight: 500;
+}
+button {
+    border: none;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+/*карточки, ведущие на страницы*/
+.services {
+    padding: 50px 50px 0;
+    background: #eff7ff;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    background: #eff7ff;
+    padding: 0px 50px 50px;
+}
+.cards figure {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+}
+.cards img {
+    max-width: 100%;
+    width: 100%;   /*убрать, когда будут норм. фото*/
+}
+.cards figcaption {
+    padding: 20px 10px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+}
+.card {
+    flex-basis: 250px;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #000;
+    cursor: pointer;
+}
+.card:hover {
+    text-decoration: none;
+    border: none;
+    font-weight: normal;
+}
+
+/*footer*/
+.contacts {
+    padding-top: 40px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.contacts h2 {
+    margin-bottom: 20px;
+}
+.contacts p {
+    margin-bottom: 10px;
+    font-size: .8rem;
+}
+
+
+/*общие классы*/
+.left_block { /*+*/
+    float: left;
+    margin-right: 20px;
+}
+
+.right_block {/*+*/
+    float: right;
+    margin-left: 20px;
+}
+.right_text { /*+*/
+    text-align: right;
+}
+.border_top_left { /*+*/
+    border-top: double #036 4px;
+    border-left: double #036 4px;
+    padding: 10px 0 0 10px;
+}
+
+.border_bot_right {/*+*/
+    border-bottom: double #036 4px;
+    border-right: double #036 4px;
+    padding: 0 10px 10px 0;
+}
+
+.border_bot {
+    border-bottom: double #036 4px;
+    padding-bottom: 10px;
+}
+.param { /*+*/
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.hidden { /*+*/
+    display: none;
+}
+.w170 {
+    width: 170px;
+}
+
+.w220 {/*+*/
+    width: 220px;
+}
+
+.w380 {/*+*/
+    width: 380px;
+}
+
+article {
+    margin-top: 70px;
+}
+article h2 {
+    margin-bottom: 20px;
+}
+
+.photos {
+    width: 100%;
+    margin: 30px auto -50px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+
+
+
+/*вкладки*/
+.tabs {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.6;
+}
+.tab_handler {
+    flex-grow: 1;
+    text-align: center;
+    padding: 10px; 
+}
+.tab_handler:hover,
+.tab_handler:focus {
+    transform: scale(1.05);
+}
+.tab_handler a {
+    color: #036;    
+    letter-spacing: 2px;
+    border-bottom: #036 1px solid;
+    padding: 0 20px 10px;
+}
+.tab_active a{
+   color: #c00;
+   border-bottom-color: #c00;
+}
+.tab_handler a:hover {
+    text-decoration: none;
+}
+.tabs_content {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.tabs_content h3 {
+    color: #036;
+    letter-spacing: .5px;
+    margin-top: 50px;
+}
+.topLink {
+    color: #c00;
+    font-size: 12px;
+}
+
